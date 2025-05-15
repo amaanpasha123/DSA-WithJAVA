@@ -8,8 +8,27 @@ public class realworld {
             System.out.println();
         }
     }
+
+    public static int factorial(int n){
+        int f=1;
+        for (int i = 1; i<=n; i++){
+            f *= i;
+        }
+        return f;
+    }
+
+    public static int binomialFact(int n , int r){
+        int n_fact = factorial(n);
+        int r_fact = factorial(r);
+        int bcd = factorial(n-r);
+        int realone = n_fact / (r_fact*bcd);
+        return realone;
+    }
+
+
     public static void main(String[] args){
-         pattern(7);
+         int result = binomialFact(5,2);
+        System.out.println(result);
     }
 }
 
