@@ -66,9 +66,43 @@ public class HollowRectangle {
             System.out.println();
         }
     }
+    public static void rhombus(int n){
+        for (int i = 1; i<=n; i++){
+            //spaces
+            for (int j = 1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            // stars
+            for (int j = 1; j<=n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void HollowRohombus(int n){
+        for (int i = 1; i<=n; i++){
+            //spaces
+            for (int j=1; j<=(n-i); j++){
+                System.out.print(" ");
+            }
+            //stars
+            for (int j=1; j<=n; j++){
+                if (i==1|| i==n||j==1||j==n){
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String [] args){
 //        HollowRectangle(4,5);
 //        newnum(5);
         ButterFly(5);
+        rhombus(5);
+        HollowRohombus(5);
     }
 }
